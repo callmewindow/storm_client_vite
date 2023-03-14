@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    // 指定@匹配src
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // 增加持久pinia的指定
+    "types": [
+      "pinia-plugin-persist"
+    ]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "*.ts", "./src/**/*.ts", "*.mjs"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules"]
+}
